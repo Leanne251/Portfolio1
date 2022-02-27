@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-import { HamburgerIcon, PhoneIcon } from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
 
 function NavBarSmall() {
 	return (

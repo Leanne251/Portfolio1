@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Heading, Box } from '@chakra-ui/react';
+import { Heading, Box } from '@chakra-ui/react';
 
 function Interests() {
 	return (

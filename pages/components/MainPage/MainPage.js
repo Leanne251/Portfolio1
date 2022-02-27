@@ -1,115 +1,109 @@
 import React from 'react';
-import { Heading, Text, HStack, VStack, Box, Center, Image, Span } from '@chakra-ui/react';
-import NavBar from '../NavBar/NavBar';
+import { Heading, Text, Stack, VStack, Box, Center, Image, Flex, Spacer, Grid, GridItem } from '@chakra-ui/react';
+
 import BottomBtn from '../Buttons/BottomBtn';
 
 function MainPage() {
 	return (
-		<Box h="100vh">
-			<NavBar className="NavBar" />
+		<Grid templateColumns="0.5fr 2fr 3fr" templateRows="1fr 2fr 2fr 1fr 2fr" p={15} h="100vh">
+			<GridItem colStart={2} colEnd={3} rowStart={2} rowEnd={3}>
+				<Heading as="h1" size="4xl" bg="tomato" p={5} color="white" borderRadius="5">
+					<Center>Leanne Smith</Center>
+				</Heading>
 
-			<VStack h="100vh" align="flex-start" pt={12} ml={150}>
-				<Box bg="tomato" w="50%" p={4} color="white" borderRadius="5">
-					<Heading as="h1" size="4xl">
-						<Center>Leanne Smith</Center>
-					</Heading>
+				<Heading color="#003E1F" fontSize="3xl" letterSpacing={12} pt={5}>
+					<Center> FULL STACK DEVELOPER</Center>
+				</Heading>
+
+				<Box
+					color="#003E1F"
+					fontSize="3xl"
+					letterSpacing="widest"
+					borderBottom=" 5px solid tomato"
+					p={1}
+					borderRadius="5"
+				>
+					<Text fontSize="lg" color="#003E1F">
+						Creative, Innovative, Problem Solver, Team Player
+					</Text>
 				</Box>
-				<Center>
-					<Heading color="#003E1F" fontSize="3xl" letterSpacing="widest" pt={5}>
-						F U L L - S T A C K - D E V E L O P E R
-					</Heading>
-				</Center>
+			</GridItem>
 
-				<Box>
-					<Box
-						color="#003E1F"
-						fontSize="3xl"
-						letterSpacing="widest"
-						borderBottom=" 5px solid tomato"
-						p={1}
-						borderRadius="5"
-					>
-						<Text fontSize="lg" color="#003E1F">
-							Creative, Innovative, Problem Solver, Team Player
-						</Text>
-					</Box>
-				</Box>
+			<GridItem colStart={2} colEnd={3} rowStart={4} rowEnd={5}>
+				<Stack direction={[ 'column', 'row' ]} justify="center" bg="
+#f6f6f8" p={5} borderRadius="10">
+					<Image
+						src="/Images/Mainpage/HTM.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
 
-				<Box pt={20}>
-					<Box bg="white" w="100%" p={4} mt={4} borderRadius="10">
-						<HStack justify="space-evenly">
-							<Image
-								src="/Images/Mainpage/HTM.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-
-							<Image
-								src="/Images/Mainpage/CSS2.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/js2.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/react.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/node1.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/postgres1.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/chakra.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-							<Image
-								src="/Images/Mainpage/figma1.png"
-								boxSize="100px"
-								objectFit="fill"
-								_hover={{
-									transform: 'translate(0, -15px)'
-								}}
-							/>
-						</HStack>
-					</Box>
-				</Box>
-
+					<Image
+						src="/Images/Mainpage/CSS2.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+					<Image
+						src="/Images/Mainpage/js2.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+					<Image
+						src="/Images/Mainpage/react1.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+				</Stack>
+				<Stack direction={[ 'column', 'row' ]} justify="center" bg="
+#f6f6f8" p={5} borderRadius="10">
+					<Image
+						src="/Images/Mainpage/node1.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+					<Image
+						src="/Images/Mainpage/postgres1.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+					<Image
+						src="/Images/Mainpage/chakra1.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+					<Image
+						src="/Images/Mainpage/figma1.png"
+						boxSize="100px"
+						objectFit="fill"
+						_hover={{
+							transform: 'translate(0, -15px)'
+						}}
+					/>
+				</Stack>
 				<BottomBtn text="Find Out More" />
-			</VStack>
-		</Box>
+			</GridItem>
+		</Grid>
 	);
 }
 
@@ -133,3 +127,6 @@ export default MainPage;
 			</GridItem>
 		</Grid> */
 }
+/* <Flex h="90vh" wrap="wrap" direction="column" w={[ 300, 400, 500 ]}>
+			<VStack align="flex-start" pt={20} ml={150}>
+		 */

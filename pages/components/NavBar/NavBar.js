@@ -5,7 +5,7 @@ import { Center, HStack, Flex, Spacer, Box } from '@chakra-ui/react';
 function NavBar() {
 	return (
 		<Flex justify="flex-end" bg="white">
-			<HStack spacing="50px" h="50px" fontWeight="bold" mr={150}>
+			<HStack spacing="50px" h="50px" fontWeight="bold" mr={30}>
 				<Center
 					_hover={{
 						borderBottom: '4px coral solid',

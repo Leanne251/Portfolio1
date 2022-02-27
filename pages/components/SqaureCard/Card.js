@@ -4,8 +4,8 @@ function Card({ image, text, link }) {
 	return (
 		<Square
 			boxSize="xs"
-			bg="lightGreen"
-			border=" 5px solid darkGreen"
+			bg="#FEEB72"
+			border=" 5px solid #003E1F"
 			radii="2"
 			_hover={{
 				background: 'orange.300'
@@ -13,7 +13,7 @@ function Card({ image, text, link }) {
 		>
 			<a href={link} target="_blank" />
 
-			<Heading isWrap fontSize="6xl" color="white" p={4}>
+			<Heading textShadow="0 0 10px black" isWrap fontSize="6xl" color="white" p={4}>
 				{text}
 			</Heading>
 		</Square>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './components/SqaureCard/Card';
-import NavBar from './components/NavBar/NavBar';
-import { Heading, Box, Center, Flex } from '@chakra-ui/react';
+
+import { Heading, Box, Center, Stack } from '@chakra-ui/react';
 import BottomBtn from './components/Buttons/BottomBtn';
 
 function Projects() {
@@ -23,20 +23,19 @@ function Projects() {
 		}
 	];
 	return (
-		<Box h="100vh">
-			<NavBar />
+		<Box>
 			<Center>
 				<Heading fontSize="6xl" p={8}>
-					Project Examples{' '}
+					Project Examples
 				</Heading>
 			</Center>
 
 			<Center>
-				<Flex justify="space-evenly" w="100vw">
+				<Stack direction={[ 'column', 'row' ]} justify="space-evenly">
 					{myWork.map((element) => {
 						return <Card key={element.key} image={element.image} text={element.text} link={element.link} />;
 					})}
-				</Flex>
+				</Stack>
 			</Center>
 
 			<BottomBtn text="Contact" />

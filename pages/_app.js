@@ -1,4 +1,5 @@
 import { ChakraProvider, CSSReset, Box } from '@chakra-ui/react';
+import React from 'react';
 import theme from '../styles/theme';
 import '../styles/index.css';
 import '@fontsource/anton/400.css';

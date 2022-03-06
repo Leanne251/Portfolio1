@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heading, Text, Stack, VStack, Box, Center, Image, Flex, Spacer, Grid, GridItem } from '@chakra-ui/react';
+import Link from 'next/link';
 
 import BottomBtn from '../Buttons/BottomBtn';
 
@@ -7,19 +8,19 @@ function MainPage() {
 	return (
 		<Grid templateColumns="0.5fr 2fr 3fr" templateRows="1fr 2fr 2fr 1fr 2fr" p={15} h="100vh">
 			<GridItem colStart={2} colEnd={3} rowStart={2} rowEnd={3}>
-				<Heading as="h1" size="4xl" bg="tomato" p={5} color="white" borderRadius="5">
+				<Heading as="h1" size="4xl" bg="#ff8a5b" p={5} color="white" borderRadius="5">
 					<Center>Leanne Smith</Center>
 				</Heading>
 
 				<Heading color="#003E1F" fontSize="3xl" letterSpacing={12} pt={5}>
-					<Center> FULL STACK DEVELOPER</Center>
+					FULL STACK DEVELOPER
 				</Heading>
 
 				<Box
 					color="#003E1F"
 					fontSize="3xl"
 					letterSpacing="widest"
-					borderBottom=" 5px solid tomato"
+					borderBottom=" 10px solid #ff8a5b"
 					p={1}
 					borderRadius="5"
 				>
@@ -30,8 +31,15 @@ function MainPage() {
 			</GridItem>
 
 			<GridItem colStart={2} colEnd={3} rowStart={4} rowEnd={5}>
-				<Stack direction={[ 'column', 'row' ]} justify="center" bg="
-#f6f6f8" p={5} borderRadius="10">
+				<Stack
+					direction={[ 'column', 'row' ]}
+					justify="center"
+					align="center"
+					bg="
+#f6f6f8"
+					p={5}
+					borderRadius="10"
+				>
 					<Image
 						src="/Images/Mainpage/HTM.png"
 						boxSize="100px"
@@ -66,8 +74,15 @@ function MainPage() {
 						}}
 					/>
 				</Stack>
-				<Stack direction={[ 'column', 'row' ]} justify="center" bg="
-#f6f6f8" p={5} borderRadius="10">
+				<Stack
+					direction={[ 'column', 'row' ]}
+					justify="center"
+					align="center"
+					bg="
+#f6f6f8"
+					p={5}
+					borderRadius="10"
+				>
 					<Image
 						src="/Images/Mainpage/node1.png"
 						boxSize="100px"
@@ -101,7 +116,13 @@ function MainPage() {
 						}}
 					/>
 				</Stack>
-				<BottomBtn text="Find Out More" />
+				<Link href="/about">
+					<a>
+						<Center pt={4}>
+							<BottomBtn text="About Me" />
+						</Center>
+					</a>
+				</Link>
 			</GridItem>
 		</Grid>
 	);

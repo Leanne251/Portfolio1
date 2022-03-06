@@ -8,7 +8,7 @@ function NavBar() {
 			<HStack spacing="50px" h="50px" fontWeight="bold" mr={30}>
 				<Center
 					_hover={{
-						borderBottom: '4px coral solid',
+						borderBottom: '4px #ff8a5b solid',
 						color: 'darkGreen'
 					}}
 				>
@@ -19,7 +19,7 @@ function NavBar() {
 
 				<Center
 					_hover={{
-						borderBottom: '4px coral solid',
+						borderBottom: '4px #ff8a5b solid',
 						color: 'darkGreen'
 					}}
 				>
@@ -29,22 +29,12 @@ function NavBar() {
 				</Center>
 				<Center
 					_hover={{
-						borderBottom: '4px coral solid',
+						borderBottom: '4px #ff8a5b solid',
 						color: 'darkGreen'
 					}}
 				>
 					<Link href="/projects">
 						<a>Projects</a>
-					</Link>
-				</Center>
-				<Center
-					_hover={{
-						borderBottom: '4px coral solid',
-						color: 'darkGreen'
-					}}
-				>
-					<Link href="/contact">
-						<a>Contact</a>
 					</Link>
 				</Center>
 			</HStack>

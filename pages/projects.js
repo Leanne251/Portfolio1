@@ -1,44 +1,52 @@
-import React from 'react';
 import Card from './components/SqaureCard/Card';
+import { myWork } from '../data/myProjects';
+import { Button, Heading, Box, Center, VStack, SimpleGrid } from '@chakra-ui/react';
 
-import { Heading, Box, Center, Stack } from '@chakra-ui/react';
-import BottomBtn from './components/Buttons/BottomBtn';
+import GitHubCalendar from 'react-github-calendar';
 
 function Projects() {
-	const myWork = [
-		{
-			id: 1,
-			text: 'Vanilla JavaScript',
-			link: 'http://www.google.com'
-		},
-		{
-			id: 2,
-			text: 'Recipes With React',
-			link: 'my link'
-		},
-		{
-			id: 3,
-			text: 'Full Stack App',
-			link: 'my link'
-		}
-	];
 	return (
 		<Box>
 			<Center>
-				<Heading fontSize="6xl" p={8}>
+				<Heading fontSize="6xl" p={6} color="#003E1F" borderBottom=" 15px solid tomato">
 					Project Examples
 				</Heading>
 			</Center>
 
 			<Center>
-				<Stack direction={[ 'column', 'row' ]} justify="space-evenly">
-					{myWork.map((element) => {
-						return <Card key={element.key} image={element.image} text={element.text} link={element.link} />;
-					})}
-				</Stack>
-			</Center>
+				<VStack>
+					<SimpleGrid columns={[ 1, 2, 3 ]} spacing="40px" p={8}>
+						{myWork.map((element) => {
+							return (
+								<Card
+									key={element.key}
+									header={element.header}
+									title={element.title}
+									link={element.link}
+									info={element.info}
+								/>
+							);
+						})}
+					</SimpleGrid>
 
-			<BottomBtn text="Contact" />
+					<a href="https://github.com/Leanne251" target="_blank">
+						<div
+							style={{
+								backgroundColor: '#f6f6f8',
+								border: '8px solid #003E1F',
+								padding: '1em',
+								marginTop: '1em',
+								marginBottom: '1em'
+							}}
+						>
+							<p style={{ fontFamily: 'Raleway', fontWeight: 800, color: 'black', padding: '10px' }}>
+								My Github Contributions
+							</p>
+							<GitHubCalendar username="Leanne251" />
+						</div>
+					</a>
+				</VStack>
+			</Center>
 		</Box>
 	);
 }

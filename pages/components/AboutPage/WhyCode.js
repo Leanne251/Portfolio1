@@ -8,11 +8,16 @@ function WhyCode() {
 				Why Code?
 			</Heading>
 			<Box p={5}>
-				<Text color="#003E1F">
-					I really enjoy learning about all aspects of tech. There are so many different sides to this career
-					path from design and user experience to problem solving and analytical thnking. I really feel like
-					it opens so many doors to different oppertunities and it is something that is forever growing
-					meaning it will never become obsolete in the future.
+				<Text>
+					I just love learning things! I like to have something I can devote my time to and feel like I am
+					achieving something. In my old career in travel I was always learning about new destinations and
+					creating exciting itineraries for my clients. I even started designing my own website! With more
+					people booking online it is becoming increasingly difficult to find clients to provide a
+					personalised travel service for. With the additon of the pandemic it has just felt like the right
+					time to delve into a new career path. I love that there are so many different sides to this field
+					from design and user experience to problem solving and analytical thnking. I really feel like it
+					opens so many doors to different oppertunities and it is something that is forever growing meaning
+					it will never become obsolete in the future.
 				</Text>
 			</Box>
 		</div>

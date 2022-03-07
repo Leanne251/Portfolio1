@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Heading, Box } from '@chakra-ui/react';
-import css from './myBackground.module.css';
+import css from './about.module.css';
 
 function MyBackground() {
 	return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Heading, Box } from '@chakra-ui/react';
+import css from './about.module.css';
 
 function Interests() {
 	return (
@@ -12,7 +13,7 @@ function Interests() {
 					It's been brilliant learning with{' '}
 					<a href="https://www.schoolofcode.co.uk/" className={css.link}>
 						 School of Code
-					</a>{' '}
+					</a>
 					about different areas of tech. One of the areas I really enjoy is working with the front end and
 					developing with Javascript and React. I like the problem solving aspects and thinking about the
 					relationships between components and deciding which methods are required to generate the correct

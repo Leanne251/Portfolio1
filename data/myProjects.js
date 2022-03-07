@@ -17,7 +17,7 @@ export const myWork = [
 	},
 	{
 		id: 3,
-		title: 'One Week Project',
+		title: 'Bootcamper Feedback App',
 		header: 'Working with a group of four',
 		link: 'https://dazzling-morse-39a8b6.netlify.app',
 		info:
@@ -25,7 +25,7 @@ export const myWork = [
 	},
 	{
 		id: 4,
-		title: 'Four Week Project',
+		title: 'Life Lifter App',
 		header: 'Working in a team of six',
 		link: 'https://soc-final-project.netlify.app/',
 		info:

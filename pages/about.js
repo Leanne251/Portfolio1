@@ -15,7 +15,7 @@ function About() {
 			</GridItem>
 			<GridItem colSpan={[ 1, 1 ]} rowSpan={1} bg="#f6f6f8" border="8px solid #003E1F">
 				<Center>
-					<Image src="/Images/MeCircle.png" />
+					<Image src="/Images/MeCircle.png" height="100%" />
 				</Center>
 			</GridItem>
 			<GridItem colSpan={[ 1 ]} rowSpan={1} bg="white">

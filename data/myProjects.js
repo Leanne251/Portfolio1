@@ -27,7 +27,7 @@ export const myWork = [
 		id: 4,
 		title: 'Life Lifter App',
 		header: 'Working in a team of six',
-		link: 'https://soc-final-project.netlify.app/',
+		link: 'https://lifelifter.netlify.app/',
 		info:
 			'The final part of the School of Code bootcamp includes a 4 week project. We had a blank slate when deciding our problem so we used a Miro board to brain storm different ideas. There was a lot of discussin about fitness, health & wellbeing so we decided to combine these topics into a personalised goal-setting app. The project enabled you to select different exercises, recipes, and set personal goals which could be diarised to show up on your dashboard each day. This enabled the user to log in and tick them off as they completed them. To develop our app we used an external API for data as well as creating our own database to store the users schedule and making fetch requests on the required date. We also used Firebase authentication to personalise the application to the user. '
 	},

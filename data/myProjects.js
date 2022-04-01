@@ -19,7 +19,7 @@ export const myWork = [
 		id: 3,
 		title: 'Bootcamper Feedback App',
 		header: 'Working with a group of four',
-		link: 'https://dazzling-morse-39a8b6.netlify.app',
+		link: 'https://dazzling-morse-39a8b6.netlify.apphttps://bootcampers-social.netlify.app/',
 		info:
 			'Week 9 of School of Code introduced me to my first full week of engineering. Our team developed a full stack application which would be helpful for new bootcampers. As bootcampers work remotely we decided to build a platform where they could annoymously share their thoughts & feelings of the day and give each other encouragement on such a fast-paced course. With just a week, the project was quite intense and we hit a few stumbling blocks when it came to deploying - however, we hit these early & remained calm to produce our two page application. '
 	},

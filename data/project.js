@@ -35,7 +35,7 @@ export const myWork = [
 		id: 5,
 		title: 'Holiday Project',
 		header: 'Implementing skills in front & back end',
-		link: '#',
+		link: 'https://holiday-project.netlify.app/',
 		info: `I've started working on a full stack application which integrates Firebase for authorisation and uses Cloudinary to allow a user to upload their own pictures from their computer. The user can view all holidays submitted by everyone, submit their own holidays and save 'bucket list' holidays to their account. This project is a work-in-progress and is built using React in the front-end and Node.js & Express in the back-end. Data is stored using Cloudinary & Heroku Postgres SQL database.`
 	},
 	{

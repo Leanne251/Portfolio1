@@ -23,7 +23,7 @@ function Card({ header, title, link, info }) {
 		<Square
 			boxSize="xs"
 			bg="#FEEB72"
-			border=" 8px solid #003E1F"
+			border="8px solid #003E1F"
 			radii="2"
 			_hover={{
 				background: '#ff8a5b'

@@ -17,7 +17,7 @@ export const myWork = [
 	},
 	{
 		id: 3,
-		title: 'Bootcamper Feedback App',
+		title: 'Bootcamp Feedback',
 		header: 'Working with a group of four',
 		link: 'https://bootcampers-social.netlify.app/',
 		info:

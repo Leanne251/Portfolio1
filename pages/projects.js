@@ -1,5 +1,5 @@
 import Card from './components/SqaureCard/Card';
-import { myWork } from '../data/myProjects';
+import { myWork } from '../data/project';
 import { Button, Heading, Box, Center, VStack, SimpleGrid } from '@chakra-ui/react';
 
 import GitHubCalendar from 'react-github-calendar';

@@ -19,7 +19,7 @@ export const myWork = [
 		id: 3,
 		title: 'Bootcamper Feedback App',
 		header: 'Working with a group of four',
-		link: 'https://dazzling-morse-39a8b6.netlify.apphttps://bootcampers-social.netlify.app/',
+		link: 'https://bootcampers-social.netlify.app/',
 		info:
 			'Week 9 of School of Code introduced me to my first full week of engineering. Our team developed a full stack application which would be helpful for new bootcampers. As bootcampers work remotely we decided to build a platform where they could annoymously share their thoughts & feelings of the day and give each other encouragement on such a fast-paced course. With just a week, the project was quite intense and we hit a few stumbling blocks when it came to deploying - however, we hit these early & remained calm to produce our two page application. '
 	},
@@ -33,17 +33,16 @@ export const myWork = [
 	},
 	{
 		id: 5,
-		title: 'Full Stack App',
+		title: 'Holiday Project',
 		header: 'Implementing skills in front & back end',
 		link: '#',
-		info:
-			'My previous solo projects have focused on front end and using an external API. This project is to practise & develop my skills in database creation & front end design. Link coming soon...'
+		info: `I've started working on a full stack application which integrates Firebase for authorisation and uses Cloudinary to allow a user to upload their own pictures from their computer. The user can view all holidays submitted by everyone, submit their own holidays and save 'bucket list' holidays to their account. This project is a work-in-progress and is built using React in the front-end and Node.js & Express in the back-end. Data is stored using Cloudinary & Heroku Postgres SQL database.`
 	},
 	{
 		id: 6,
 		title: "What's Next? ",
 		header: 'Future Challenges',
 		link: '#',
-		info: 'My next challenge will be to understand AWS & Typescript, so please watch this space...'
+		info: `My next challange is to learn the Angular framwork, PHP for the back end and ElasticSearch. These skills will help me grow in first developer role with VoxPopMe`
 	}
 ];

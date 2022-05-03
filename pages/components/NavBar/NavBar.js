@@ -37,6 +37,16 @@ function NavBar() {
 						<a>Projects</a>
 					</Link>
 				</Center>
+				<Center
+					_hover={{
+						borderBottom: '4px #ff8a5b solid',
+						color: 'darkGreen'
+					}}
+				>
+					<Link href="/blog">
+						<a>Blog</a>
+					</Link>
+				</Center>
 			</HStack>
 		</Flex>
 	);

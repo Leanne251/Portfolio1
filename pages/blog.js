@@ -1,12 +1,15 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-
+import ReactMarkdown from 'react-markdown';
 import BlogPost from '../pages/components/BlogPost/BlogPost';
 
 // The Blog Page Content
 export default function Blog({ posts }) {
 	return (
 		<main>
+			<div>
+				<ReactMarkdown>### Hello, *world!* </ReactMarkdown>
+			</div>
 			{posts.map((post) => {
 				//extract slug and frontmatter
 				const { slug, frontmatter } = post;
@@ -15,7 +18,7 @@ export default function Blog({ posts }) {
 
 				//JSX for individual blog listing
 				return (
-					<div style={{ border: '1px solid black' }}>
+					<div style={{ border: '1px solid black', margin: '20px' }}>
 						<BlogPost
 							key={title}
 							title={title}

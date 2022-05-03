@@ -1,7 +1,8 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-
+import MarkDownWrapper from '../components/MarkDownWrapper/MarkDownWrapper';
+import { Box } from '@chakra-ui/react';
 // The page for each post
 export default function Post({ frontmatter, content }) {
 	const { title, author, category, date, bannerImage, tags } = frontmatter;
@@ -10,15 +11,17 @@ export default function Post({ frontmatter, content }) {
 
 	return (
 		<main>
-			<img src={bannerImage} style={{ widht: '200px', height: '200px;' }} />
-			<h1>{title}</h1>
+			<img src={bannerImage} style={{ width: '200px', height: '200px;' }} />
+			<h2>{title}</h2>
 			<h2>
 				{author} || {date}
 			</h2>
 			<h3>
-				{category} || {tags.join()}
+				{category} || {tags.join(', ')}
 			</h3>
-			<div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+			{/* <MarkDownWrapper content={content} /> */}
+
+			<Box bg="white" m="10rem" p="5rem" dangerouslySetInnerHTML={{ __html: md().render(content) }} />
 		</main>
 	);
 }

@@ -1,8 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import MarkDownWrapper from '../components/MarkDownWrapper/MarkDownWrapper';
-import { Box } from '@chakra-ui/react';
+import { Box, Image, Center } from '@chakra-ui/react';
 // The page for each post
 export default function Post({ frontmatter, content }) {
 	const { title, author, category, date, bannerImage, tags } = frontmatter;
@@ -10,19 +9,15 @@ export default function Post({ frontmatter, content }) {
 	console.log('content', content);
 
 	return (
-		<main>
-			<img src={bannerImage} style={{ width: '200px', height: '200px;' }} />
-			<h2>{title}</h2>
-			<h2>
-				{author} || {date}
-			</h2>
-			<h3>
-				{category} || {tags.join(', ')}
-			</h3>
-			{/* <MarkDownWrapper content={content} /> */}
-
-			<Box bg="white" m="10rem" p="5rem" dangerouslySetInnerHTML={{ __html: md().render(content) }} />
-		</main>
+		<Box height="100vh" overflow="auto">
+			<Box
+				hight="100vh"
+				bg="white"
+				m="10rem"
+				p="5rem"
+				dangerouslySetInnerHTML={{ __html: md().render(content) }}
+			/>
+		</Box>
 	);
 }
 
@@ -53,4 +48,17 @@ export async function getStaticProps({ params: { slug } }) {
 			content
 		}
 	};
+}
+
+{
+	/* <Center>
+				<Image src={bannerImage} border="5px solid black" style={{ width: '85vW', height: 'auto' }} />
+			</Center>
+
+			<h5>
+				{author} || {date}
+			</h5>
+			<h6>
+				{category} || {tags.join(', ')}
+			</h6> */
 }

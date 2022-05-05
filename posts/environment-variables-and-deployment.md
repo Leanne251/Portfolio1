@@ -3,7 +3,7 @@ title: "Environment Variables & Deployment"
 author: "Leanne Smith"
 category: "Security"
 date: "2022-05-03"
-bannerImage: "https://res.cloudinary.com/leanne251/image/upload/v1651589905/Blog/shazaf-zafar-xIgOKhPpY5M-unsplash_eagbey.jpg"
+bannerImage: "https://res.cloudinary.com/leanne251/image/upload/c_scale,w_250/v1651589905/Blog/shazaf-zafar-xIgOKhPpY5M-unsplash_eagbey.jpg"
 tags:
     - Node.JS
     - Javascript

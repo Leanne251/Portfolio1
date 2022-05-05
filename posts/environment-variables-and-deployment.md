@@ -1,4 +1,5 @@
 ---
+id: 1
 title: "Environment Variables & Deployment"
 author: "Leanne Smith"
 category: "Security"
@@ -85,8 +86,12 @@ E.g connecting to Heroku or Firebase.
 Other times, once your config has been declared, these variables might be global - with no need to save a variable & export them anywhere, essentially, once you are connected, you’re connected. 
 
 E.g Cloudinary. 
+
+##### **Postgres**
 \
 &nbsp;
+
+**REMEMBER** `npm i pg` so you can create a new pool to handle the SQL requests going to the data base.
 ##### **Deployment**
 ---
 \

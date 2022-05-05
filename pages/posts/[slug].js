@@ -1,22 +1,23 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import md from 'markdown-it';
-import { Box, Image, Center } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import Comments from '../components/Comments/Comments';
+
 // The page for each post
 export default function Post({ frontmatter, content }) {
-	const { title, author, category, date, bannerImage, tags } = frontmatter;
-
-	console.log('content', content);
+	const { id, title, author, category, date, bannerImage, tags } = frontmatter;
 
 	return (
 		<Box height="100vh" overflow="auto">
 			<Box
 				hight="100vh"
 				bg="white"
-				m="10rem"
+				m="5rem 5rem 0rem 5rem"
 				p="5rem"
 				dangerouslySetInnerHTML={{ __html: md().render(content) }}
 			/>
+			<Comments id={id} />
 		</Box>
 	);
 }

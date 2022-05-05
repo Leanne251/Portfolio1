@@ -22,7 +22,6 @@ function Comments({ id }) {
 	async function sendTheComment() {
 		const response = await fetch('http://localhost:5000/comments', {
 			method: 'POST',
-			mode: 'no-cors',
 			headers: {
 				'Content-Type': 'application/json'
 			},

@@ -2,24 +2,13 @@ import { useState } from 'react';
 import { Icon, HStack } from '@chakra-ui/react';
 import { FcLike } from 'react-icons/fc';
 
-function Likes({ id, setheartLikes, heartLikes }) {
-	console.log(heartLikes.likes);
-
-	let like;
-
-	// if (heartLikes.likes === null) {
-	// 	heartLikes.likes = 0;
-	// }
-	heartLikes.forEach((hl) => {
-		if (id === hl.commentID) {
-			like = hl.likes;
-		}
-	});
+function Likes({ id, likes, increaseByOne }) {
+	console.log('likes', likes);
 
 	return (
 		<HStack>
-			<Icon as={FcLike} />
-			{heartLikes && <p>{like}</p>}
+			<Icon as={FcLike} onClick={() => increaseByOne(id, likes)} />
+			<p>{likes}</p>
 		</HStack>
 	);
 }

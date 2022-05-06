@@ -5,7 +5,7 @@ import React from 'react';
 
 function FetchedComments({ id }) {
 	const [ fetchedComments, setFetchedComments ] = useState();
-	const [ heartLikes, setheartLikes ] = useState([]);
+	console.log('fetch', fetchedComments);
 
 	//likes should be an array of the values of likes
 
@@ -29,19 +29,32 @@ function FetchedComments({ id }) {
 		fetchTheComments();
 	}, []);
 
-	useEffect(
-		() => {
-			if (fetchedComments) {
-				setheartLikes(
-					fetchedComments.map((comment) => ({
-						commentID: comment.id,
-						likes: comment.likes
-					}))
-				);
-			}
-		},
-		[ fetchedComments ]
-	);
+	// useEffect(
+	// 	() => {
+	// 		if (fetchedComments) {
+	// 			setheartLikes(
+	// 				fetchedComments.map((comment) => ({
+	// 					commentID: comment.id,
+	// 					likes: comment.likes
+	// 				}))
+	// 			);
+	// 		}
+	// 	},
+	// 	[ fetchedComments ]
+	//);
+
+	function increaseByOne(id) {
+		console.log('id', id);
+		const index = fetchedComments.findIndex((comment) => comment.id === id);
+		const newComment = (fetchedComments[index].likes = fetchedComments[index].likes + 1);
+		const update = { ...fetchedComments[index], likes: newComment };
+		setFetchedComments([ ...fetchedComments.slice(0, index), update, ...fetchedComments.slice(index + 1) ]);
+	}
+	console.log('fetched', fetchedComments);
+
+	// we have the id of the comment,
+	// we just need to find that comment that matches that id and add one to the likes
+	// then spliced fetched comments to update it
 
 	return (
 		<Box>
@@ -65,7 +78,7 @@ function FetchedComments({ id }) {
 								<strong>Comments: </strong>
 								{fetched.comment}
 							</p>
-							<Likes id={fetched.id} setheartLikes={setheartLikes} heartLikes={heartLikes} />
+							<Likes id={fetched.id} likes={fetched.likes} increaseByOne={increaseByOne} />
 						</Box>
 					);
 				})}

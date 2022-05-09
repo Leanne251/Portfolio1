@@ -20,14 +20,14 @@ function Comments({ id }) {
 	}
 
 	async function sendTheComment() {
-		const response = await fetch('http://localhost:5000/comments', {
+		const response = await fetch('https://blogmay2022.herokuapp.com/comments', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(blogpost)
 		});
-		console.log(response);
+
 		setBlogpost({
 			...blogpost,
 			blogID: id,

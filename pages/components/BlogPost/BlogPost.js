@@ -16,10 +16,10 @@ function BlogPost({ title, author, category, date, bannerImage, tags, slug, fron
 		>
 			<Center>
 				<VStack>
-					<Image src={bannerImage} alt={title} />
+					<Image src={bannerImage} alt={title} mt={3} />
 
 					<Link href={`/posts/${slug}`}>
-						<Heading textShadow="0 0 10px black" iswrap fontSize="3xl" color="white" p={4} cursor="pointer">
+						<Heading textShadow="0 0 10px black" fontSize="3xl" color="white" p={4} cursor="pointer">
 							{title} <br />
 						</Heading>
 					</Link>

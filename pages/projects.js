@@ -19,7 +19,7 @@ function Projects() {
 						{myWork.map((element) => {
 							return (
 								<Card
-									key={element.key}
+									key={element.id}
 									header={element.header}
 									title={element.title}
 									link={element.link}

@@ -49,7 +49,7 @@ function FetchedComments({ id, blogpost }) {
 	async function sendLikes(id) {
 		console.log('id', id);
 		try {
-			const response = await fetch(`http://localhost:5000/comments/${id}`, {
+			const response = await fetch(`https://blogmay2022.herokuapp.com/comments/${id}`, {
 				method: 'PATCH',
 				body: JSON.stringify({}),
 				headers: {
@@ -76,8 +76,14 @@ function FetchedComments({ id, blogpost }) {
 					let date = new Date(fetched.creation_date).toDateString();
 
 					return (
-						<Box border="1px solid 
-                        #edf2f7" borderRadius="0.375rem" p={5} m={5}>
+						<Box
+							key={fetched.id}
+							border="1px solid 
+                        #edf2f7"
+							borderRadius="0.375rem"
+							p={5}
+							m={5}
+						>
 							<p>
 								<strong>Author: </strong>
 								{fetched.user_name}

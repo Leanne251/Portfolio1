@@ -3,8 +3,6 @@ import { Icon, HStack } from '@chakra-ui/react';
 import { FcLike } from 'react-icons/fc';
 
 function Likes({ id, likes, increaseByOne }) {
-	console.log('likes', likes);
-
 	return (
 		<HStack>
 			<Icon as={FcLike} onClick={() => increaseByOne(id, likes)} />

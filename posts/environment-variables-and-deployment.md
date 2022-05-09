@@ -17,9 +17,11 @@ tags:
 
 ## Environment Variables, Config Files & Deployment
 *02/05/2022*
+\
 &nbsp;
 ###### *Just some quick fire notes to help structure passwords & deployment* ###
 &nbsp;
+
 ![A diagram to show the flow of data](https://res.cloudinary.com/leanne251/image/upload/v1651589934/Blog/diagram-env-variables_urju2x.png#centerimg "A diagram to show the flow of data")
 
 
@@ -86,12 +88,13 @@ E.g connecting to Heroku or Firebase.
 Other times, once your config has been declared, these variables might be global - with no need to save a variable & export them anywhere, essentially, once you are connected, you’re connected. 
 
 E.g Cloudinary. 
-
-##### **Postgres**
 \
 &nbsp;
+##### **Postgres**
 
 **REMEMBER** `npm i pg` so you can create a new pool to handle the SQL requests going to the data base.
+\
+&nbsp;
 ##### **Deployment**
 ---
 \
@@ -127,8 +130,8 @@ Sometimes you just click the github link & everything's dandy!
 \
 &nbsp;
 
-However, sometimes you need to use the Heroku CLI! 
-AND... sometime you have a monorepo, where your back end is sitting with your front end.
+However, sometimes you need to use the Heroku CLI...
+AND... sometimes you have a monorepo, where your back end is sitting with your front end.
 
 &nbsp;
 
@@ -136,14 +139,15 @@ AND... sometime you have a monorepo, where your back end is sitting with your fr
 
 &nbsp;
 - Create your Heroku local branch at the top level - where your repo sits! 
-- You can follow the commands on Heroku: git init ⇒ `heroku git:remote -a your-root-folder =>` then `git add .`, `git commit -m “message”`
+- You can follow the commands on Heroku: `git init` ⇒ `heroku git:remote -a your-root-folder ` => `git add .` => `git commit -m “message”`
 - You can view your Heroku branch `git remote -v`
 - Now, you need to push to a subtree, as you only want your backend folder to go to the branch. 
-- Use this command: `git subtree push --prefix your-folder-name heroku master`, where all you replace if your-folder-name, with what it is! 
+- Use this command: `git subtree push --prefix your-folder-name heroku master`, where all you replace is your-folder-name, with what it is.
 - This should get your folder deployed 🤞
-- You can continue pushing to github for local changes you want to save and push to the subtree when you are ready to deploy. 
+- You can continue pushing to github for local changes you want to save and push to the subtree when you are ready to deploy.
+\ 
 &nbsp;
-\
+
 
 ![Screen shot of Heroku Deployment](https://res.cloudinary.com/leanne251/image/upload/c_scale,w_800/v1651589905/Blog/heroku_local_ydjycv.png "Screen shot of Heroku Deployment")
 \

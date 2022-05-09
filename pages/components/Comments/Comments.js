@@ -28,6 +28,13 @@ function Comments({ id }) {
 			body: JSON.stringify(blogpost)
 		});
 		console.log(response);
+		setBlogpost({
+			...blogpost,
+			blogID: id,
+			date: new Date(),
+			userName: '',
+			comment: ''
+		});
 	}
 
 	return (
@@ -35,17 +42,20 @@ function Comments({ id }) {
 			<h5>Leave a comment:</h5>
 			<FormControl isRequired>
 				<FormLabel htmlFor="first-name">Your Name: </FormLabel>
-				<Input type="text" name="userName" onChange={getInfo} />
+				<Input type="text" name="userName" onChange={getInfo} value={blogpost.userName} />
 				<FormLabel htmlFor="first-name">Comment: </FormLabel>
-				<Textarea type="text" name="comment" onChange={getInfo} resize="none" />
+				<Textarea type="text" name="comment" onChange={getInfo} resize="none" value={blogpost.comment} />
 				<Button m={2} onClick={submitComment}>
 					Submit
 				</Button>
 			</FormControl>
 
-			<FetchedComments id={id} />
+			<FetchedComments id={id} blogpost={blogpost} />
 		</Box>
 	);
 }
 
 export default Comments;
+
+//submit the comment, and this should trigger the data being fetched again.
+// so rather than just fetching comments on load, data should also be fetched when the comment is submitted

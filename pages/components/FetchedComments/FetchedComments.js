@@ -3,7 +3,7 @@ import { Box, HStack } from '@chakra-ui/react';
 import Likes from '../Likes/Likes';
 import React from 'react';
 
-function FetchedComments({ id }) {
+function FetchedComments({ id, blogpost }) {
 	const [ fetchedComments, setFetchedComments ] = useState();
 	console.log('fetch', fetchedComments);
 
@@ -11,37 +11,26 @@ function FetchedComments({ id }) {
 
 	// map over fetchedComments and push the values of likes up to the array, if likes=null, set the value to 0.
 
-	useEffect(() => {
-		async function fetchTheComments() {
-			try {
-				const response = await fetch(`http://localhost:5000/comments/${id}`, {
-					headers: {
-						'Access-Control-Allow-Origin': '*'
-					}
-				});
-				console.log('response', response);
-				const data = await response.json();
-				setFetchedComments(data.payload);
-			} catch (e) {
-				console.log('err', e);
+	useEffect(
+		() => {
+			async function fetchTheComments() {
+				try {
+					const response = await fetch(`https://blogmay2022.herokuapp.com/comments/${id}`, {
+						headers: {
+							'Access-Control-Allow-Origin': '*'
+						}
+					});
+					console.log('response', response);
+					const data = await response.json();
+					setFetchedComments(data.payload);
+				} catch (e) {
+					console.log('err', e);
+				}
 			}
-		}
-		fetchTheComments();
-	}, []);
-
-	// useEffect(
-	// 	() => {
-	// 		if (fetchedComments) {
-	// 			setheartLikes(
-	// 				fetchedComments.map((comment) => ({
-	// 					commentID: comment.id,
-	// 					likes: comment.likes
-	// 				}))
-	// 			);
-	// 		}
-	// 	},
-	// 	[ fetchedComments ]
-	//);
+			fetchTheComments();
+		},
+		[ blogpost ]
+	);
 
 	function increaseByOne(id) {
 		console.log('id', id);
@@ -49,8 +38,31 @@ function FetchedComments({ id }) {
 		const newComment = (fetchedComments[index].likes = fetchedComments[index].likes + 1);
 		const update = { ...fetchedComments[index], likes: newComment };
 		setFetchedComments([ ...fetchedComments.slice(0, index), update, ...fetchedComments.slice(index + 1) ]);
+		sendLikes(id);
 	}
-	console.log('fetched', fetchedComments);
+
+	// need to do a patch request to update likes in the database
+
+	// using the comment ID I need to update the number of likes in the database
+	//
+
+	async function sendLikes(id) {
+		console.log('id', id);
+		try {
+			const response = await fetch(`http://localhost:5000/comments/${id}`, {
+				method: 'PATCH',
+				body: JSON.stringify({}),
+				headers: {
+					'Content-Type': 'application/json; charset=UTF-8'
+				}
+			});
+			console.log('response', response);
+			const data = await response.json();
+			console.log('data', data);
+		} catch (e) {
+			console.log('err', e);
+		}
+	}
 
 	// we have the id of the comment,
 	// we just need to find that comment that matches that id and add one to the likes

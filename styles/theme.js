@@ -28,15 +28,25 @@ const theme = extendTheme({
 				bg: 'gray.50',
 				color: 'gray.900'
 			},
+			h1: {
+				fontSize: '6xl',
+				fontWeight: 'bold'
+			},
 			h2: {
-				fontSize: '2xl',
+				fontSize: '5xl',
 				fontWeight: 'bold'
 			},
 			h3: {
-				fontSize: 'lg'
+				fontSize: '4xl'
 			},
 			h4: {
-				fontSize: 'md'
+				fontSize: '3xl'
+			},
+			h5: {
+				fontSize: '2xl'
+			},
+			h6: {
+				fontSize: '1xl'
 			}
 		}
 	},

@@ -10,8 +10,6 @@ import NavBar from './components/NavBar/NavBar';
 function MyApp({ Component, pageProps }) {
 	return (
 		<ChakraProvider theme={theme}>
-			<CSSReset />
-
 			<Box bgImage="/PlantBG.jpg" backgroundPosition="center">
 				<NavBar className="NavBar" />
 

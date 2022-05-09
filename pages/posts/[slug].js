@@ -50,16 +50,3 @@ export async function getStaticProps({ params: { slug } }) {
 		}
 	};
 }
-
-{
-	/* <Center>
-				<Image src={bannerImage} border="5px solid black" style={{ width: '85vW', height: 'auto' }} />
-			</Center>
-
-			<h5>
-				{author} || {date}
-			</h5>
-			<h6>
-				{category} || {tags.join(', ')}
-			</h6> */
-}

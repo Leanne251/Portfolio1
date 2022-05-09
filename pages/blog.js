@@ -1,7 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Center, VStack, SimpleGrid, Input, Heading, Text, Box } from '@chakra-ui/react';
-import Card from './components/SqaureCard/Card';
 import BlogPost from '../pages/components/BlogPost/BlogPost';
 
 // The Blog Page Content
@@ -9,18 +8,19 @@ export default function Blog({ posts }) {
 	return (
 		<main>
 			<VStack justify="center">
-				<Box p={5} m={5} bg="other.white">
-					<Center>
-						<h4 as="h4" fontWeight="italic">
-							The world of development is a continuing space of learning. Here is a space to jot down my
-							findings and offer a place of reflection for the future!
-						</h4>
-					</Center>
+				<Box p={5} m={5} bg="other.white" borderRadius="1rem">
+					<h5 as="h4" fontWeight="italic">
+						With so much to learn in the world of development it's easy to forget concepts you might learn
+						when you start working on something new! Here is a place for reflection, to jot down ideas and
+						make notes and give me a place to refer to when I need a memory job. I hope these posts might
+						help others and I'd be really interested to find out your thoughts, feelings, hints and tips so
+						please don't be afraid to leave a comment!
+					</h5>
 				</Box>
-				<Box alignSelf="flex-start" width="100vw" m={5}>
+				{/* <Box alignSelf="flex-start" width="100vw" m={5}>
 					<Text>Search Posts</Text>
 					<Input type="text" width="30%" />
-				</Box>
+				</Box> */}
 
 				<SimpleGrid columns={[ 1, 2, 3 ]} spacing="40px" p={8}>
 					{posts.map((post) => {

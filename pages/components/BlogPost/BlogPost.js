@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Center, VStack, Button, Image, Heading, Box } from '@chakra-ui/react';
+import { Center, VStack, Image, Heading, Box } from '@chakra-ui/react';
 
 function BlogPost({ title, author, category, date, bannerImage, tags, slug, frontmatter }) {
 	return (
@@ -34,12 +34,3 @@ function BlogPost({ title, author, category, date, bannerImage, tags, slug, fron
 }
 
 export default BlogPost;
-
-{
-	/* <Center>
-	{' '}
-	<Button colorScheme="green" width="200px" onClick={onOpen}>
-		Find Out More
-	</Button>
-</Center>; */
-}

@@ -5,7 +5,7 @@ import { Center, VStack, Image, Heading, Box } from '@chakra-ui/react';
 function BlogPost({ title, author, category, date, bannerImage, tags, slug, frontmatter }) {
 	return (
 		<Box
-			boxSize="sm"
+			boxSize={[ 'xsm', 'sm' ]}
 			bg="#FEEB72"
 			border="8px solid #049f71"
 			radii="2"
@@ -19,7 +19,7 @@ function BlogPost({ title, author, category, date, bannerImage, tags, slug, fron
 					<Image src={bannerImage} alt={title} mt={3} />
 
 					<Link href={`/posts/${slug}`}>
-						<Heading textShadow="0 0 10px black" fontSize="3xl" color="white" p={4} cursor="pointer">
+						<Heading textShadow="0 0 10px black" fontSize="2xl" color="white" p={1} cursor="pointer">
 							{title} <br />
 						</Heading>
 					</Link>

@@ -38,7 +38,7 @@ function Comments({ id }) {
 	}
 
 	return (
-		<Box bg="white" m="1rem 5rem 5rem 5rem" p="5rem">
+		<Box bg="white" m={[ '3rem 1rem 1rem 1rem', '3rem 5rem 5rem 5rem' ]} p={[ '1rem', '5rem' ]}>
 			<h5>Leave a comment:</h5>
 			<FormControl isRequired>
 				<FormLabel htmlFor="first-name">Your Name: </FormLabel>

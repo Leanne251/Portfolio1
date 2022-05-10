@@ -11,10 +11,10 @@ export default function Post({ frontmatter, content }) {
 	return (
 		<Box height="100vh" overflow="auto">
 			<Box
-				hight="100vh"
-				bg="white"
-				m="5rem 5rem 0rem 5rem"
-				p="5rem"
+				// hight="100vh"
+				// bg="white"
+				// m="5rem 5rem 0rem 5rem"
+				// p="5rem"
 				dangerouslySetInnerHTML={{ __html: md().render(content) }}
 			/>
 			<Comments id={id} />

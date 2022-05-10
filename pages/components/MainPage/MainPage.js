@@ -42,7 +42,7 @@ function MainPage() {
 				>
 					<Image
 						src="/Images/Mainpage/HTM.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -51,7 +51,7 @@ function MainPage() {
 
 					<Image
 						src="/Images/Mainpage/CSS2.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -59,7 +59,7 @@ function MainPage() {
 					/>
 					<Image
 						src="/Images/Mainpage/js2.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -67,7 +67,7 @@ function MainPage() {
 					/>
 					<Image
 						src="/Images/Mainpage/react1.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -85,7 +85,7 @@ function MainPage() {
 				>
 					<Image
 						src="/Images/Mainpage/node1.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -93,7 +93,7 @@ function MainPage() {
 					/>
 					<Image
 						src="/Images/Mainpage/postgres1.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -101,7 +101,7 @@ function MainPage() {
 					/>
 					<Image
 						src="/Images/Mainpage/chakra1.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
@@ -109,7 +109,7 @@ function MainPage() {
 					/>
 					<Image
 						src="/Images/Mainpage/figma1.png"
-						boxSize="100px"
+						boxSize={[ '75px', '100px' ]}
 						objectFit="fill"
 						_hover={{
 							transform: 'translate(0, -15px)'
